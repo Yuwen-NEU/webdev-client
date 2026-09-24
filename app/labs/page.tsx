@@ -9,7 +9,7 @@ export default function Labs() {
       <h2 id="wd-name">Yuwen Huang</h2>
       <p>
         <a
-          href="https://github.com/Yuwen-NEU"
+          href="https://github.com/Yuwen-NEU/webdev-client"
           id="wd-github"
           target="_blank"
           rel="noreferrer"
