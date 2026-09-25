@@ -4,8 +4,6 @@ export default function Labs() {
   return (
     <div id="wd-labs">
       <h1>Labs</h1>
-      {/* TODO (1.7 delivery): replace with your full name, and point
-          wd-github at your own webdev-client repository. */}
       <h2 id="wd-name">Yuwen Huang</h2>
       <p>
         <a

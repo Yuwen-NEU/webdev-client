@@ -17,7 +17,7 @@ export default function AnchorTag() {
       </a>
       <br />
       <a
-        href="https://github.com/Yuwen-NEU/webdev-client"
+        href="https://github.com/Yuwen-NEU"
         id="wd-your-github"
         target="_blank"
         rel="noreferrer"

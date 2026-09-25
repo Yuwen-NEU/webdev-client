@@ -61,8 +61,6 @@ export default function HighlightedBoxLab() {
         <p>A second box with different style props wrapping different content.</p>
       </HighlightedBox>
 
-      {/* TODO (On your own, 1.3.8): replace the SAMPLE name and goals below
-          with your own, and pick style props that feel different. */}
       <HighlightedBox
         backgroundColor="#e0f7fa"
         borderColor="teal"

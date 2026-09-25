@@ -39,7 +39,7 @@ export default function ListTags() {
       <ul id="wd-your-books">
         <li>Harry Potter</li>
         <li>The Great Gatsby</li>
-        <li>The Vampires Diaries</li>
+        <li>The Vampire Diaries</li>
       </ul>
 
       <h5>HTML tags from this chapter</h5>

@@ -1,7 +1,4 @@
-/* Student Profile form (1.3.6 "On your own").
-   TODO: every value below is a SAMPLE - replace the placeholders, defaults,
-   and checked options with your own details. Keep the file path, the
-   component name, and the form id wd-your-form as they are. */
+/* Student Profile form (1.3.6) with my own details. */
 export default function YourForm() {
   return (
     <form id="wd-your-form">
@@ -27,7 +24,7 @@ export default function YourForm() {
       <label htmlFor="wd-your-student-id">Student ID: </label>
       <input
         type="password"
-        defaultValue="00123456"
+        defaultValue="002507407"
         title="Your university student ID"
         id="wd-your-student-id"
       />
