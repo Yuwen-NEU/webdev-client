@@ -15,7 +15,7 @@ export default function MediaQueriesDemo() {
           Below 500px: Black text on Orange background
         </li>
         <li className="wd-mq-rule-ai">
-          500px to 750px: White text on Purple background
+          Up to 749px: White text on Purple background
         </li>
         <li className="wd-mq-rule-750">
           750px to 1000px: Black text on Yellow background

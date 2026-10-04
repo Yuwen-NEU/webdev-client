@@ -33,7 +33,7 @@ export default function Lab2() {
         practice and you should avoid using the style attribute
       </p>
       <p style={{ backgroundColor: "green", color: "yellow" }}>
-        This is my own paragraph with a green background and yellow text.
+        Hello from Vancouver. 
       </p>
       <p
         id="wd-ai-style-attr"
@@ -54,7 +54,7 @@ export default function Lab2() {
           different look and feel
         </p>
         <p id="wd-id-selector-3">
-          My third paragraph has its own ID and a teal color scheme
+          My own paragraph has its own ID and a teal color scheme: Teal on White
         </p>
         <p id="wd-ai-id-selector">
           Sample paragraph with its own ID and an orange color scheme

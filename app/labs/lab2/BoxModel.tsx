@@ -21,8 +21,6 @@ export default function BoxModel() {
         <div className="wd-box-sizing-border">
           border-box: width 250px includes padding and border
         </div>
-        {/* Same width/padding/border as above — border-box keeps the declared
-            250px width on screen; content-box grows to 310px. */}
         <div id="wd-ai-box-sizing" className="wd-box-sizing-border">
           border-box again: this one stays exactly 250px wide
         </div>

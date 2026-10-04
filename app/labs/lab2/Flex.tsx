@@ -14,7 +14,7 @@ export default function Flex() {
       <br />
       <div className="wd-flex-row-container">
         <div className="wd-bg-color-green wd-fg-color-white wd-flex-grow-1">
-          I grow
+          Fourth flex grow
         </div>
         <div className="wd-bg-color-gray">Natural width</div>
         <div className="wd-bg-color-yellow wd-width-200px">Pinned 200px</div>

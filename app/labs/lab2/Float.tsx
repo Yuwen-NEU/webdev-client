@@ -40,7 +40,7 @@ export default function Float() {
           alt="Tesla bot"
         />
         My own float: the Tesla bot sits on the left and this text wraps around
-        it on the right. {LOREM}
+        it on the right. {LOREM} {LOREM} {LOREM} {LOREM} {LOREM} {LOREM}
         <div className="wd-float-done" />
       </div>
       <div>

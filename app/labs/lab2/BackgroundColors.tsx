@@ -9,7 +9,7 @@ export default function BackgroundColors() {
         </span>
       </p>
       <p className="wd-bg-color-gray wd-fg-color-blue">
-        Gray background with blue text keeps this note readable.
+        This sentence is readable because the background is gray and the foreground is blue
       </p>
       <p id="wd-ai-bg" className="wd-bg-color-yellow wd-fg-color-black">
         Sample block with a yellow background and black text.

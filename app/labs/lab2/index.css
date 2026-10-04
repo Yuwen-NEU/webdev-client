@@ -3,9 +3,6 @@
   color: white;
 } */
 
-/* Tag rules are scoped to Lab 2 so they do not leak into Kambaz after
-   client-side navigation. :where() keeps the specificity of a plain tag
-   selector, so class rules below still win. */
 :where(#wd-lab2) h3 {
   background-color: lightblue;
   color: darkslategray;
@@ -65,8 +62,7 @@ p#wd-ai-id-selector {
   color: white;
 }
 
-/* Cascade: specificity and source order.
-   Personal experiment — the id rule should win (blue). */
+/* Cascade: specificity and source order */
 :where(#wd-css-cascade) div {
   background-color: lightgreen;
 }

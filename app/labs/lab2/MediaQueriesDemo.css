@@ -16,24 +16,9 @@
   text-decoration: underline;
 }
 
-@media (max-width: 499px) {
-  .wd-media-queries-demo {
-    background-color: darkorange;
-    color: black;
-  }
-  .wd-media-queries-demo li.wd-mq-rule-default {
-    opacity: 0.55;
-    font-weight: normal;
-    text-decoration: none;
-  }
-  .wd-media-queries-demo li.wd-mq-rule-500 {
-    opacity: 1;
-    font-weight: bold;
-    text-decoration: underline;
-  }
-}
-
-@media (min-width: 500px) and (max-width: 749px) {
+/* Sample breakpoint — also matches below 500px, so it must come before
+   the personal max-width: 499px block, which then wins by source order */
+@media (max-width: 749px) {
   .wd-media-queries-demo {
     background-color: purple;
     color: white;
@@ -44,6 +29,24 @@
     text-decoration: none;
   }
   .wd-media-queries-demo li.wd-mq-rule-ai {
+    opacity: 1;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 499px) {
+  .wd-media-queries-demo {
+    background-color: darkorange;
+    color: black;
+  }
+  .wd-media-queries-demo li.wd-mq-rule-default,
+  .wd-media-queries-demo li.wd-mq-rule-ai {
+    opacity: 0.55;
+    font-weight: normal;
+    text-decoration: none;
+  }
+  .wd-media-queries-demo li.wd-mq-rule-500 {
     opacity: 1;
     font-weight: bold;
     text-decoration: underline;
