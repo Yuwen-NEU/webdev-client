@@ -5,9 +5,21 @@ import { usePathname } from "next/navigation";
 import { AiOutlineDashboard } from "react-icons/ai";
 import { FaRegCircleUser, FaCircleQuestion } from "react-icons/fa6";
 import { IoCalendarOutline } from "react-icons/io5";
-import { LiaBookSolid, LiaCogSolid } from "react-icons/lia";
+import { LiaBookSolid, LiaCogSolid, LiaHistorySolid } from "react-icons/lia";
 import { FaInbox } from "react-icons/fa";
 import "@/app/labs/lab2/tailwind/utilities.css";
+
+// Courses points at /dashboard (courses are opened from a card) but is
+// highlighted inside /courses/...; Help also opens /labs but never highlights.
+const LINKS = [
+  { label: "Dashboard", path: "/dashboard", icon: AiOutlineDashboard, match: "/dashboard" },
+  { label: "Courses", path: "/dashboard", icon: LiaBookSolid, match: "/courses" },
+  { label: "Calendar", path: "/calendar", icon: IoCalendarOutline, match: "/calendar" },
+  { label: "Inbox", path: "/inbox", icon: FaInbox, match: "/inbox" },
+  { label: "Labs", path: "/labs", icon: LiaCogSolid, match: "/labs" },
+  { label: "History", path: "/history", icon: LiaHistorySolid, match: "/history" },
+  { label: "Help", path: "/labs", icon: FaCircleQuestion, match: null },
+] as const;
 
 const TILE = "block py-3 text-center text-sm no-underline";
 const IDLE = `${TILE} bg-black text-white`;
@@ -15,13 +27,6 @@ const ACTIVE = `${TILE} bg-white text-red-600`;
 
 export default function KambazNavigation() {
   const pathname = usePathname() ?? "";
-  const links = [
-    { id: "wd-dashboard-link", label: "Dashboard", href: "/dashboard", match: "/dashboard", icon: AiOutlineDashboard },
-    { id: "wd-course-link", label: "Courses", href: "/dashboard", match: "/courses", icon: LiaBookSolid },
-    { id: "wd-calendar-link", label: "Calendar", href: "/calendar", match: "/calendar", icon: IoCalendarOutline },
-    { id: "wd-inbox-link", label: "Inbox", href: "/inbox", match: "/inbox", icon: FaInbox },
-    { id: "wd-labs-link", label: "Labs", href: "/labs", match: "/labs", icon: LiaCogSolid },
-  ];
   const accountActive = pathname.startsWith("/account");
   return (
     <nav
@@ -51,21 +56,22 @@ export default function KambazNavigation() {
         <br />
         Account
       </Link>
-      {links.map(({ id, label, href, match, icon: Icon }) => {
-        const active = pathname.startsWith(match);
+      {LINKS.map((link) => {
+        const active = link.match !== null && pathname.startsWith(link.match);
+        const Icon = link.icon;
         return (
-          <Link key={id} href={href} id={id} className={active ? ACTIVE : IDLE}>
+          <Link
+            key={link.label}
+            href={link.path}
+            id={`wd-${link.label.toLowerCase()}-link`}
+            className={active ? ACTIVE : IDLE}
+          >
             <Icon className="inline-block text-3xl text-red-600" />
             <br />
-            {label}
+            {link.label}
           </Link>
         );
       })}
-      <Link href="/labs" id="wd-ai-nav-help" className={IDLE}>
-        <FaCircleQuestion className="inline-block text-3xl text-red-600" />
-        <br />
-        Help
-      </Link>
     </nav>
   );
 }
